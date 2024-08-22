@@ -1,0 +1,62 @@
+{
+ "cards": [
+  {
+   "card": "Total Membership Amount Recieved.."
+  },
+  {
+   "card": "Library fine's Recieved"
+  },
+  {
+   "card": "Library fine's Pending"
+  },
+  {
+   "card": "Active Membership Card"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Article Available",
+   "width": "Half"
+  },
+  {
+   "chart": "article issue",
+   "width": "Half"
+  },
+  {
+   "chart": "Member's with Membership",
+   "width": "Half"
+  },
+  {
+   "chart": "Membership Amount Recieved",
+   "width": "Half"
+  },
+  {
+   "chart": "Fine's Recieved",
+   "width": "Half"
+  },
+  {
+   "chart": "Fine's Pending",
+   "width": "Half"
+  },
+  {
+   "chart": "Pending Amount Of Membership",
+   "width": "Half"
+  },
+  {
+   "chart": "demo",
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-06-27 16:02:44.579831",
+ "dashboard_name": "Library Management",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-06-28 17:21:06.085954",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Management",
+ "owner": "Administrator"
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member}-{due_date}",
+ "creation": "2024-06-25 17:11:29.018999",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member",
+  "article",
+  "due_date",
+  "overdue_days",
+  "return_date",
+  "fine_per_day",
+  "fine_amount",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "link_filters": "[[\"Article Issue\",\"overdue_period\",\">\",0]]",
+   "options": "Article Issue"
+  },
+  {
+   "fetch_from": "member.article",
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "label": "Article",
+   "options": "Article"
+  },
+  {
+   "fetch_from": "member.due_date",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date "
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Amount Recieved Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nPaid"
+  },
+  {
+   "fetch_from": "member.overdue_period",
+   "fieldname": "overdue_days",
+   "fieldtype": "Int",
+   "label": "overdue days"
+  },
+  {
+   "fieldname": "fine_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fine Amount ",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "default": "50",
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "fine per day"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Library fine",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-09 11:37:11.115608",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library fine",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

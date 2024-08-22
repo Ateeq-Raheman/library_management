@@ -227,3 +227,47 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# # Schedule this function to run daily
+# scheduler_events = {
+#     "daily": [
+#         "library_management.your_module.update_overdue_articles"
+#     ]
+# }
+
+
+# # hooks.py
+
+# # Document Events
+# # hooks.py
+
+# # Document Events
+# doc_events = {
+#     "Library Fine": {
+#         "before_save": "library_management.utils.calculate_fine_amount",
+#         # Add other event hooks as needed
+#     }
+# }
+
+
+# your_app/hooks.py
+
+# Add this line if not already present
+# library_management/hooks.py
+
+# Ensure the library_membership module is loaded
+# import library_management.doctype.library_membership.library_membership
+
+# library_management/hooks.py
+
+# Correct import path
+# library_management/hooks.py
+
+# Correct import path
+# import library_management.library_management.doctype.library_membership.library_membership
+
+
+# doc_events = {
+#     "Library Management": {
+#         "before_save": "library_management.library_management.doctype.library_management.library_management.before_save"
+#     }
+# }

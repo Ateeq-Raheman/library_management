@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "format:{article_name}",
+ "creation": "2024-06-21 14:10:09.851287",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "article_name",
+  "status",
+  "action",
+  "total_stock",
+  "quantity_available",
+  "quantity_rented"
+ ],
+ "fields": [
+  {
+   "fieldname": "article_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Article_name",
+   "options": "Article"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nout of stock"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Action",
+   "options": "Rent\nReturn"
+  },
+  {
+   "fieldname": "quantity_available",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity Available In Library"
+  },
+  {
+   "fieldname": "quantity_rented",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Total Rented Quantity"
+  },
+  {
+   "fieldname": "total_stock",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Stock"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-25 16:35:31.434268",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Article Management",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
