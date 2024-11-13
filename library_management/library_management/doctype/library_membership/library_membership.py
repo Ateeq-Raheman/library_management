@@ -1,17 +1,16 @@
 # Copyright (c) 2024, ateeq and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
+from frappe.model.docstatus import DocStatus
+from frappe.utils import today, getdate
+from frappe.utils import add_days, getdate
+
 
 
 class LibraryMembership(Document):
 	pass
-
-import frappe
-from frappe.model.document import Document
-from frappe.model.docstatus import DocStatus
-
 
 class LibraryMembership(Document):
     # check before submitting this document
@@ -27,11 +26,6 @@ class LibraryMembership(Document):
         )
         if exists:
             frappe.throw("There is an active membership for this member")
-
-
-import frappe
-from frappe.model.document import Document
-from frappe.model.docstatus import DocStatus
 
 
 class LibraryTransaction(Document):
@@ -88,11 +82,6 @@ class LibraryTransaction(Document):
             frappe.throw("The member does not have a valid membership")
 
 
-import frappe
-from frappe.model.document import Document
-from frappe.model.docstatus import DocStatus
-from frappe.utils import today, getdate
-
 class LibraryMembership(Document):
     # check before saving or submitting this document
     def validate(self):
@@ -117,10 +106,6 @@ class LibraryMembership(Document):
             frappe.throw("Membership joining date cannot be before today")
 
 
-
-import frappe
-from frappe.utils import add_days, getdate
-
 @frappe.whitelist()
 def send_reminder(membership):
     # Get the current date and the threshold date for expiry
@@ -143,3 +128,4 @@ def send_reminder(membership):
         return message
     else:
         return "This membership is not expiring soon."
+

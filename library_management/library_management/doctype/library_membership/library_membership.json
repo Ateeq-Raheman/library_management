@@ -94,13 +94,16 @@
    "fieldname": "expiry_date",
    "fieldtype": "Date",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Expiry Date"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "membership_status",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Membership Status"
+   "label": "Membership Status",
+   "options": "Running\nExpired"
   },
   {
    "fieldname": "balance_amount",
@@ -146,7 +149,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-17 13:19:37.634474",
+ "modified": "2024-09-24 17:41:50.636824",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Membership",
